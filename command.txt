@@ -1,0 +1,18 @@
+git init
+dvc init
+mkdir data
+echo -e "hours,marks\n1,11\n2,22\n3,33\n4,44\n5,55" > data/data.csv
+cd data
+dvc add data/data.csv
+git add 'data\.gitignore' 'data\data.csv.dvc'
+git commit -m "Add data for hours and marks"
+mkdir model
+mkdir metrics
+___________________
+Create train.py and evalaute.py in src folder
+___________________
+create dvc.yaml file
+___________________
+dvc repro   => This command will run this pipeline
+____________________
+dvc dag    => this command will show pipeline dag
